@@ -56,6 +56,10 @@ public class CommandContext {
     protected final @Nullable SuggestionContext suggestionContext;
     protected final CommandLocals locals;
 
+    public static String[] split(String args) {
+        return args.split(" ", -1);
+    }
+
     public CommandContext(String[] args, Set<Character> valueFlags, boolean completing) throws CommandException {
         this(args, valueFlags, completing, null);
     }
